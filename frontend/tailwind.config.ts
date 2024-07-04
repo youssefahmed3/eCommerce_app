@@ -48,6 +48,12 @@ const config = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
+        customColors: {
+          black: "#212121",
+          white: "#F5F5F5",
+          red: "#D01C1C",
+          blue: "#283DAE",
+        },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
