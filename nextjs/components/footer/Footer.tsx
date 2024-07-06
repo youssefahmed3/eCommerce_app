@@ -10,8 +10,8 @@ import {
 import Link from "next/link";
 function Footer() {
   return (
-    <footer className="flex flex-col bg-customColors-black text-customColors-white gap-6 py-3 px-5">
-      <div className=" flex justify-between">
+    <footer className="flex flex-col bg-customColors-black text-customColors-white gap-6 px-8 py-4">
+      <div className=" flex justify-around">
         <div className="flex flex-col gap-2">
           <h4 className="text-2xl">Logo</h4>
           <p className="w-[300px]">
