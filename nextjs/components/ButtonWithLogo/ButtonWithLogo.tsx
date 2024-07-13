@@ -6,6 +6,7 @@ interface ButtonProps {
   onClick?: () => void;
   image?: React.ReactElement;
   variant?: "primary" | "secondary"; // Extend the interface to include a variant prop
+  disabled?: boolean;
 }
 
 function ButtonWithLogo(props: ButtonProps) {
@@ -19,7 +20,7 @@ function ButtonWithLogo(props: ButtonProps) {
   const buttonClasses = `flex justify-around ${variantClasses[props.variant!]}`;
 
   return (
-    <Button className={`${buttonClasses} flex items-center justify-center gap-2 font-bold`} onClick={props.onClick}>
+    <Button className={`${buttonClasses} flex items-center justify-center gap-2 font-bold`} onClick={props.onClick} disabled={props.disabled}>
         {props.image ? <div>{props.image}</div> : null}
         <div>{props.name}</div>
     </Button>

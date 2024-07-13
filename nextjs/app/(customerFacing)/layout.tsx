@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@/app/globals.css";
 import { StoreProvider } from "@/store/StoreProvider";
+import NavBar, { NavLink } from "@/components/navbar/NavBar";
+import Footer from "@/components/footer/Footer";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -21,12 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <>
       <StoreProvider>
-        <body className={poppins.className + "flex flex-col min-h-screen"}>
-          <main className="grid grid-rows-[auto_max] gap-4">{children}</main>
-        </body>
+      <NavBar>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/categories">Categories</NavLink>
+          <NavLink href="/about">About us</NavLink>
+        </NavBar>
+        <main className="mx-5">{children}</main>
+        <Footer />
       </StoreProvider>
-    </html>
+    </>
   );
 }
