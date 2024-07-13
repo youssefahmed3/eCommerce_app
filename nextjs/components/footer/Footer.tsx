@@ -1,5 +1,6 @@
+"use client"
 import React from "react";
-import { Button } from "../ui/button";
+
 import {
   Select,
   SelectContent,
@@ -22,10 +23,10 @@ function Footer() {
         <div className="flex flex-col gap-2">
           <h4 className="text-2xl">Popular Categories</h4>
           <ul className="flex flex-col">
-            <Link href={"/"}>Category 1</Link>
-            <Link href={"/"}>Category 2</Link>
-            <Link href={"/"}>Category 3</Link>
-            <Link href={"/"}>Category 4</Link>
+            <li><Link href={"/"}>Category 1</Link></li>
+            <li><Link href={"/"}>Category 2</Link></li>
+            <li><Link href={"/"}>Category 3</Link></li>
+            <li><Link href={"/"}>Category 4</Link></li>
           </ul>
         </div>
         <div className="flex flex-col gap-2">
@@ -46,6 +47,8 @@ function Footer() {
           </SelectContent>
         </Select>
       </div>
+
+      
     </footer>
   );
 }

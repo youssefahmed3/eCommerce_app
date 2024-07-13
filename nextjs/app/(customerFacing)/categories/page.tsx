@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Page() {
+function page() {
     return (
         <div>
-            about
+            Categories
         </div>
     );
 }
 
-export default Page;
+export default page;
